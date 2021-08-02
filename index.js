@@ -5,8 +5,10 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const htmlGenerator = require("./src/htmlGenerator");
 
+// Creates array to store the team members
 const team = [];
 
+// Asks questions about the manager and then puts the answers in the team array
 const teamManager = () => {
     return inquirer.prompt([
         {
@@ -71,6 +73,7 @@ const teamManager = () => {
     })
 }
 
+// Asks questions about engineers and/or interns and then puts the answers in the team array
 const teamEmployee = () => {
     return inquirer.prompt([
         {
@@ -163,14 +166,17 @@ const teamEmployee = () => {
         team.push(employee);
 
         if (confirmAdd) {
+            // Returns the user to add another team member if they wish
             return teamEmployee(team);
         } else {
+            // or exits the prompts to create the team if they don't
             return team;
         }
 
     })
 }
 
+// Writes the index.html file and logs a success message
 const createFile = code => {
     fs.writeFile('./dist/index.html', code, err => {
         if (err) {
@@ -182,6 +188,7 @@ const createFile = code => {
     })
 }
 
+// Compiles and returns the team data to the htmlGenerator, then returns the html code to the createFile function
 teamManager()
     .then(teamEmployee)
     .then(team => {
