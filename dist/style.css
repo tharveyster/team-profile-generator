@@ -17,5 +17,14 @@
     color: white;
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+.card {
+    margin-bottom: 30px;
+}
+
+.card-header {
+    background-color: var(--cards);
+    color: white;
 }
