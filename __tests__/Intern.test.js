@@ -6,15 +6,15 @@ test('getName should return "Homer"', () => {
     expect(intern.getName()).toBe(name);
 })
 
-test('getId should return "1"', () => {
+test('getId should return "3"', () => {
     const id = 3;
     const intern = new Intern('Bart', 3, 'bart@simpsons.com', 'Springfield Elementary');
     expect(intern.getId()).toBe(id);
 })
 
-test('getEmail should return "homer@simpsons.com"', () => {
-    const email = 'homer@simpsons.com';
-    const intern = new Intern('Homer', 1, 'homer@simpsons.com', 'Springfield Elementary');
+test('getEmail should return "bart@simpsons.com"', () => {
+    const email = 'bart@simpsons.com';
+    const intern = new Intern('Bart', 3, 'bart@simpsons.com', 'Springfield Elementary');
     expect(intern.getEmail()).toBe(email);
 })
 
