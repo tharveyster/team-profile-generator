@@ -73,7 +73,6 @@ htmlGenerator = (code) => {
             const internHTML = createIntern(employee);
             htmlPage.push(internHTML);
         }
-        console.log(htmlPage);
     }
 
     const employeeHTML = htmlPage.join('');

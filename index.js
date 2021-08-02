@@ -68,7 +68,6 @@ const teamManager = () => {
         const manager = new Manager (name, id, email, officeNumber);
 
         team.push(manager); 
-        console.log(manager); 
     })
 }
 
@@ -157,14 +156,11 @@ const teamEmployee = () => {
         let employee;
         if (role === "Engineer") {
             employee = new Engineer (name, id, email, github);
-            console.log(employee);
         } else if (role === "Intern") {
             employee = new Intern (name, id, email, school);
-            console.log(employee);
         }
 
         team.push(employee);
-        console.log(team);
 
         if (confirmAdd) {
             return teamEmployee(team);
