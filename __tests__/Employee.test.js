@@ -14,5 +14,12 @@ test('getId should return "1"', () => {
 
 test('getEmail should return "homer@simpsons.com"', () => {
     const email = 'homer@simpsons.com';
-    const employee = new Employee('Homer', 1, 'homer@simpsons,com');
+    const employee = new Employee('Homer', 1, 'homer@simpsons.com');
+    expect(employee.getEmail()).toBe(email);
+})
+
+test('getRole should return "Employee"', () => {
+    const role = 'Employee';
+    const employee = new Employee('Homer', 1, 'homer@simpsons.com');
+    expect(employee.getRole()).toBe(role);
 })
