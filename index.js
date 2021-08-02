@@ -175,5 +175,25 @@ const teamEmployee = () => {
     })
 }
 
+const createFile = code => {
+    fs.writeFile('./dist/index.html', code, err => {
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log('Your team profile has been created as "index.html."')
+        }
+    })
+}
+
 teamManager()
-    .then(teamEmployee);
+    .then(teamEmployee)
+    .then(team => {
+        return htmlGenerator(team);
+    })
+    .then(index => {
+        return createFile(index);
+    })
+    .catch(err => {
+        console.log(err);
+    });
