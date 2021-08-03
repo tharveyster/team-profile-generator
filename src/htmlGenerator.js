@@ -1,3 +1,4 @@
+// Creates html code for manager card
 const createManager = function (manager) {
     return `
     <div class="col-4">
@@ -16,6 +17,7 @@ const createManager = function (manager) {
 `;
 }
 
+// Creates html code for engineer cards
 const createEngineer = function (engineer) {
     return `
     <div class="col-4">
@@ -34,6 +36,7 @@ const createEngineer = function (engineer) {
     `;
 }
 
+// Creates html code for intern cards
 const createIntern = function (intern) {
     return `
     <div class="col-4">
@@ -52,6 +55,7 @@ const createIntern = function (intern) {
     `;
 }
 
+// Compiles the html code array for all employees
 htmlGenerator = (code) => {
     const htmlPage = [];
 
@@ -81,6 +85,7 @@ htmlGenerator = (code) => {
     return createTeamProfile;
 }
 
+// Creates the base html code for the team profile page
 const createTeam = function (employeeHTML) {
     return `
     <!DOCTYPE html>
