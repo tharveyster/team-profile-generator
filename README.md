@@ -40,3 +40,6 @@ If you have questions about this repo, open an issue or contact me directly at t
 
 ## License
 MIT
+
+## Screenshot of a Page Generated With This App
+![Screenshot](./assets/images/team-profile-generator-screenshot.png)
